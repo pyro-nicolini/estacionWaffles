@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Mouse+Memoirs&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Mouse Memoirs', Arial, sans-serif;
     margin: 0;
@@ -31,7 +35,7 @@ header {
     left: 0;
     z-index: 9;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #00000000;
     height: 6rem;
@@ -40,9 +44,10 @@ header {
 .banner {
     object-fit: cover;
     height: 15rem;
-    width: 100%;
     z-index: 9;
     position: absolute;
+        width: 100%;
+        overflow: hidden;
 }
 
 .logo1 {
@@ -54,7 +59,6 @@ header {
     cursor: pointer;
     z-index: 11;
     margin-top: 1.3rem;
-    margin-right: 4rem !important;
 }
 
 .logo1:hover {
@@ -65,28 +69,24 @@ header {
 .menus {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    width: 100%;
-    padding: 1rem 0;
     transition: all 0.2s ease-in-out;
     z-index: 13;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    align-items: center;
 }
 .menu {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    width: 100%;
     transition: all 0.2s ease-in-out;
     z-index: 13;
 }
 
-nav a:hover {
+a:hover {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    width: 100%;
-    background-color: rgb(48, 143, 233);
-    padding: 1rem 0;
+    color: rgb(111, 0, 255);
  }
 
  a {
@@ -225,35 +225,11 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr auto;
     }
-    nav {
-        display: flex;
-        text-align: center;
-        grid-area: menu;
-        background-color: hsl(188, 100%, 80%);
-        color: #000;
-        width: 100%;
-        align-items: center;
-    }
-    nav>div {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 2rem;
-    }
-
-
     header {
-        height: 5rem;
-
-    }
-    .banner {
-        height: 17rem;
-        padding-top: 3rem;
-        position: absolute;
+        height: 6rem;
     }
 
     .logo1 {
-        padding-top: 3rem;
         max-width:8rem;
     }
 
